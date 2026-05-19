@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heitor - 1 aninho</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(135deg, #d4e8f1 0%, #c0dceb 100%);
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  /* === MOBILE: imagem inteira, largura 100%, sem corte === */
+  .convite {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* === DESKTOP: cartão centralizado igual à captura === */
+  @media (min-aspect-ratio: 3/4) {
+    body {
+      align-items: center;
+      padding: 20px;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .convite {
+      width: auto;
+      height: 95vh;
+      max-width: 95vw;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(74, 144, 201, 0.25),
+                  0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+  }
+</style>
+</head>
+<body>
+  <img class="convite"
+       src="https://i.postimg.cc/C101b75X/Gemini-Generated-Image-jgfxtrjgfxtrjgfx.png"
+       alt="Heitor - 1 aninho - Sugestão de presentes">
+</body>
+</html>
