@@ -15,34 +15,45 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #d4e8f1;
+    background: linear-gradient(135deg, #d4e8f1 0%, #c0dceb 100%);
   }
 
   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
     background-image: url('https://i.postimg.cc/C101b75X/Gemini-Generated-Image-jgfxtrjgfxtrjgfx.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    width: 100vw;
   }
 
-  /* Em telas mais largas (desktop), centraliza com fundo combinando */
-  @media (min-aspect-ratio: 9/16) {
+  /* Desktop / telas mais largas: cartão centralizado */
+  @media (min-aspect-ratio: 3/4) {
     body {
-      background-color: #e3f0f6;
+      padding: 20px;
     }
-  }
 
-  /* Em telas verticais (celular), preenche tudo */
-  @media (max-aspect-ratio: 9/16) {
-    body {
-      background-size: cover;
+    .card {
+      width: auto;
+      height: 95vh;
+      aspect-ratio: 768 / 1365;
+      max-width: 95vw;
+      background-size: contain;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(74, 144, 201, 0.25),
+                  0 4px 12px rgba(0, 0, 0, 0.06);
     }
   }
 </style>
 </head>
 <body>
+  <div class="card"></div>
 </body>
 </html>
